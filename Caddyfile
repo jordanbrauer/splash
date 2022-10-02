@@ -1,0 +1,4 @@
+:80
+
+bind 0.0.0.0
+file_server
