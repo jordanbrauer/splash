@@ -10,87 +10,119 @@
         <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
         <link rel="mask-icon" href="/favicon/safari-pinned-tab.svg" color="#5bbad5">
         <link rel="manifest" href="site.webmanifest">
-        <meta name="msapplication-TileColor" content="#da532c">
-        <meta name="theme-color" content="#ffffff">
-        <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap&subset=latin-ext" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
-        <link rel="stylesheet" href="https://unpkg.com/bulma@0.7.5/css/bulma.min.css" />
-        <style type="text/css">
-            html,
-            body {
-                font-family: 'Montserrat', sans-serif;
+        <script src="https://cdn.tailwindcss.com"></script>
+        <style>
+            .gradient-text {
+                background: linear-gradient(90deg,#01a96e,#01a9a3,#017fb0);
+                background-clip: text;
+                -webkit-background-clip: text;
+                background-size: 200% 200%;
+                color: #0000!important;
+                transition: color .2s ease-in-out
             }
 
-            .shadow {
-                -webkit-box-shadow: -5px 6px 6px #bbb;  /* Safari 3-4, iOS 4.0.2 - 4.2, Android 2.3+ */
-                -moz-box-shadow:    -5px 6px 6px #bbb;  /* Firefox 3.5 - 3.6 */
-                box-shadow:         -5px 6px 6px #bbb;  /* Opera 10.5, IE 9, Firefox 4+, Chrome 6+, iOS 5 */
+            .gradient-highlight,.gradient-text {
+                -webkit-animation: rainbow 2s ease-in-out infinite;
+                animation: rainbow 2s ease-in-out infinite
+            }
+
+            .gradient-highlight {
+                background: linear-gradient(90deg,#01a96e,#01a9a3,#017fb0);
+                background-size: 200% 200%;
+                color: #fff;
+                display: inline-block;
+                transition: color .1s ease-in-out
+            }
+
+            .gradient-cta {
+                align-items: center;
+                background-clip: padding-box!important;
+                /* !importanté */
+                box-sizing: border-box;
+                display: flex;
+                position: relative
+            }
+
+            .gradient-cta:hover:before {
+                -webkit-animation: raindbow 2s ease-in-out infinite;
+                animation: raindbow 2s ease-in-out infinite;
+                background: linear-gradient(90deg,#01a96e,#01a9a3,#017fb0)!important;
+                background-size: 200% 200%;
+                border-radius: inherit!important;
+                /* !importanté */
+                bottom: 0;
+                content: "";
+                left: 0;
+                margin: -1px!important;
+                /* !importanté */
+                position: absolute;
+                right: 0;
+                top: 0;
+                transition: color .1s ease-in-out;
+                z-index: -1
+            }
+
+            .gradient-cta:hover>.gradient-cta-text {
+                -webkit-animation: rainbow 2s ease-in-out infinite;
+                animation: rainbow 2s ease-in-out infinite;
+                background: linear-gradient(90deg,#01a96e,#01a9a3,#017fb0);
+                background-clip: text;
+                -webkit-background-clip: text;
+                background-size: 200% 200%;
+                color: #0000!important
+            }
+
+            @-webkit-keyframes rainbow {
+                0% {
+                    background-position: 0
+                }
+
+                33% {
+                    background-position: 50%
+                }
+
+                66% {
+                    background-position: 100%
+                }
+
+                to {
+                    background-position: 50%
+                }
+            }
+
+            @keyframes rainbow {
+                0% {
+                    background-position: 0
+                }
+
+                33% {
+                    background-position: 50%
+                }
+
+                66% {
+                    background-position: 100%
+                }
+
+                to {
+                    background-position: 50%
+                }
             }
         </style>
     </head>
-
     <body>
-        <section class="hero is-fullheight is-default is-bold">
-            <div class="hero-head">
-                <nav class="navbar">
-                    <div class="container">
-                        <div class="navbar-brand">
-                            <a class="navbar-item" href="/">
-                                <img src="logo.png" alt="Logo">
-                            </a>
-                            <span class="navbar-burger burger" data-target="navbarMenu">
-                                <span></span>
-                                <span></span>
-                                <span></span>
-                            </span>
-                        </div>
-                        <div id="navbarMenu" class="navbar-menu">
-                            <div class="navbar-end">
-                                <div class="tabs is-right">
-                                    <ul>
-                                        <li><a href="http://blog.jordanbrauer.dev">Blog</a></li>
-                                        <li><a disabled class="is-static" href="#">Portfolio</a></li>
-                                        <li><a disabled href="#">Resume</a></li>
-                                        <li><a disabled href="#">Contact</a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </nav>
-            </div>
-            <div class="hero-body">
-                <div class="container has-text-centered">
-                    <div class="columns is-vcentered">
-                        <div class="column is-5">
-                            <figure class="shadow image is-square">
-                                <img src="/me.jpg" alt="Description">
-                            </figure>
-                        </div>
-                        <div class="column is-6 is-offset-1">
-                            <h1 class="title is-2">Greetings, eh!</h1>
-                            <h2 class="subtitle is-4">My name is Jordan</h2>
-                            <p>I develop software for a living, play table-top RPGs &amp; board games for fun, and think cats are better than dogs <span class="has-text-grey-light is-italic">(change my mind)</span>.</p>
-                            <br>
-                            <p class="has-text-centered">
-                                <a disabled class="button is-medium is-info is-outlined">Get to Know Me</a>
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
+        <div class="bg-white">
+          <div class="px-6 py-24 sm:px-6 sm:py-32 lg:px-8">
+            <div class="mx-auto max-w-2xl text-center">
+              <h2 class="text-3xl font-bold tracking-tight text-gray-800 sm:text-4xl"><span class="font-medium text-gray-400">╰(▔∀▔)╯</span><br>Hello, and welcome!</h2>
 
-            <div class="hero-foot">
-                <div class="container">
-                    <div class="tabs is-centered">
-                        <ul class="yomomma">
-                            <li>You've reached the bottom.</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </section>
+              <p class="text-justify mx-auto mt-8 max-w-xl text-lg leading-8 text-gray-600">My name is Jordan, and I guess you could say that I am a <a href="https://etiennefd.substack.com/p/common-tech-jobs-described-as-cabals" target="_blank" class="font-medium italic text-blue-600 hover:text-blue-700">software developer</a>. Currently I am leading a small team at <a href="https://www.neofinancial.com/" target="_blank" class="text-blue-600 hover:text-blue-700">Neo Financial</a>, working on our <a href="https://www.neofinancial.com/for-business/platform-as-a-service" target="_blank" class="text-blue-600 hover:text-blue-700">PaaS products</a>.</p>
 
-        <script src="/js/bulma.js"></script>
+              <div class="mt-10 flex flex-col items-center justify-center gap-y-2">
+                <a href="https://blog.jordanbrauer.dev" class="rounded-full border border-gray-900 hover:border-transparent bg-transparent hover:bg-gray-900 hover:text-white px-3.5 py-2.5 text-sm font-semibold text-gray-900 shadow-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 line-through">Read my blog</a>
+                <p class="text-sm italic leading-6 text-gray-400">or, you know.. dont!</p>
+              </div>
+            </div>
+          </div>
+        </div>
     </body>
 </html>
