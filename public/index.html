@@ -1,128 +1,143 @@
 <!doctype html>
 <html>
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Jordan Brauer</title>
-        <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
-        <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
-        <link rel="mask-icon" href="/favicon/safari-pinned-tab.svg" color="#5bbad5">
-        <link rel="manifest" href="site.webmanifest">
-        <script src="https://cdn.tailwindcss.com"></script>
-        <style>
-            .gradient-text {
-                background: linear-gradient(90deg,#01a96e,#01a9a3,#017fb0);
-                background-clip: text;
-                -webkit-background-clip: text;
-                background-size: 200% 200%;
-                color: #0000!important;
-                transition: color .2s ease-in-out
-            }
 
-            .gradient-highlight,.gradient-text {
-                -webkit-animation: rainbow 2s ease-in-out infinite;
-                animation: rainbow 2s ease-in-out infinite
-            }
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Jordan Brauer</title>
+  <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
+  <link rel="mask-icon" href="/favicon/safari-pinned-tab.svg" color="#5bbad5">
+  <link rel="manifest" href="site.webmanifest">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    .gradient-text {
+      background: linear-gradient(90deg, #01a96e, #01a9a3, #017fb0);
+      background-clip: text;
+      -webkit-background-clip: text;
+      background-size: 200% 200%;
+      color: #0000 !important;
+      transition: color .2s ease-in-out
+    }
 
-            .gradient-highlight {
-                background: linear-gradient(90deg,#01a96e,#01a9a3,#017fb0);
-                background-size: 200% 200%;
-                color: #fff;
-                display: inline-block;
-                transition: color .1s ease-in-out
-            }
+    .gradient-highlight,
+    .gradient-text {
+      -webkit-animation: rainbow 2s ease-in-out infinite;
+      animation: rainbow 2s ease-in-out infinite
+    }
 
-            .gradient-cta {
-                align-items: center;
-                background-clip: padding-box!important;
-                /* !importanté */
-                box-sizing: border-box;
-                display: flex;
-                position: relative
-            }
+    .gradient-highlight {
+      background: linear-gradient(90deg, #01a96e, #01a9a3, #017fb0);
+      background-size: 200% 200%;
+      color: #fff;
+      display: inline-block;
+      transition: color .1s ease-in-out
+    }
 
-            .gradient-cta:hover:before {
-                -webkit-animation: raindbow 2s ease-in-out infinite;
-                animation: raindbow 2s ease-in-out infinite;
-                background: linear-gradient(90deg,#01a96e,#01a9a3,#017fb0)!important;
-                background-size: 200% 200%;
-                border-radius: inherit!important;
-                /* !importanté */
-                bottom: 0;
-                content: "";
-                left: 0;
-                margin: -1px!important;
-                /* !importanté */
-                position: absolute;
-                right: 0;
-                top: 0;
-                transition: color .1s ease-in-out;
-                z-index: -1
-            }
+    .gradient-cta {
+      align-items: center;
+      background-clip: padding-box !important;
+      /* !importanté */
+      box-sizing: border-box;
+      display: flex;
+      position: relative
+    }
 
-            .gradient-cta:hover>.gradient-cta-text {
-                -webkit-animation: rainbow 2s ease-in-out infinite;
-                animation: rainbow 2s ease-in-out infinite;
-                background: linear-gradient(90deg,#01a96e,#01a9a3,#017fb0);
-                background-clip: text;
-                -webkit-background-clip: text;
-                background-size: 200% 200%;
-                color: #0000!important
-            }
+    .gradient-cta:hover:before {
+      -webkit-animation: raindbow 2s ease-in-out infinite;
+      animation: raindbow 2s ease-in-out infinite;
+      background: linear-gradient(90deg, #01a96e, #01a9a3, #017fb0) !important;
+      background-size: 200% 200%;
+      border-radius: inherit !important;
+      /* !importanté */
+      bottom: 0;
+      content: "";
+      left: 0;
+      margin: -1px !important;
+      /* !importanté */
+      position: absolute;
+      right: 0;
+      top: 0;
+      transition: color .1s ease-in-out;
+      z-index: -1
+    }
 
-            @-webkit-keyframes rainbow {
-                0% {
-                    background-position: 0
-                }
+    .gradient-cta:hover>.gradient-cta-text {
+      -webkit-animation: rainbow 2s ease-in-out infinite;
+      animation: rainbow 2s ease-in-out infinite;
+      background: linear-gradient(90deg, #01a96e, #01a9a3, #017fb0);
+      background-clip: text;
+      -webkit-background-clip: text;
+      background-size: 200% 200%;
+      color: #0000 !important
+    }
 
-                33% {
-                    background-position: 50%
-                }
+    @-webkit-keyframes rainbow {
+      0% {
+        background-position: 0
+      }
 
-                66% {
-                    background-position: 100%
-                }
+      33% {
+        background-position: 50%
+      }
 
-                to {
-                    background-position: 50%
-                }
-            }
+      66% {
+        background-position: 100%
+      }
 
-            @keyframes rainbow {
-                0% {
-                    background-position: 0
-                }
+      to {
+        background-position: 50%
+      }
+    }
 
-                33% {
-                    background-position: 50%
-                }
+    @keyframes rainbow {
+      0% {
+        background-position: 0
+      }
 
-                66% {
-                    background-position: 100%
-                }
+      33% {
+        background-position: 50%
+      }
 
-                to {
-                    background-position: 50%
-                }
-            }
-        </style>
-    </head>
-    <body>
-        <div class="bg-white">
-          <div class="px-6 py-24 sm:px-6 sm:py-32 lg:px-8">
-            <div class="mx-auto max-w-2xl text-center">
-              <h2 class="text-3xl font-bold tracking-tight text-gray-800 sm:text-4xl"><span class="font-medium text-gray-400">╰(▔∀▔)╯</span><br>Hello, and welcome!</h2>
+      66% {
+        background-position: 100%
+      }
 
-              <p class="text-justify mx-auto mt-8 max-w-xl text-lg leading-8 text-gray-600">My name is Jordan, and I guess you could say that I am a <a href="https://etiennefd.substack.com/p/common-tech-jobs-described-as-cabals" target="_blank" class="font-medium italic text-blue-600 hover:text-blue-700">software developer</a>. Currently I am leading a small team at <a href="https://www.neofinancial.com/" target="_blank" class="text-blue-600 hover:text-blue-700">Neo Financial</a>, working on our <a href="https://www.neofinancial.com/for-business/platform-as-a-service" target="_blank" class="text-blue-600 hover:text-blue-700">PaaS products</a>.</p>
+      to {
+        background-position: 50%
+      }
+    }
+  </style>
+</head>
 
-              <div class="mt-10 flex flex-col items-center justify-center gap-y-2">
-                <a href="https://blog.jordanbrauer.dev" class="rounded-full border border-gray-900 hover:border-transparent bg-transparent hover:bg-gray-900 hover:text-white px-3.5 py-2.5 text-sm font-semibold text-gray-900 shadow-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 line-through">Read my blog</a>
-                <p class="text-sm italic leading-6 text-gray-400">or, you know.. dont!</p>
-              </div>
-            </div>
-          </div>
+<body>
+  <div class="bg-white">
+    <div class="px-6 py-24 sm:px-6 sm:py-32 lg:px-8">
+      <div class="mx-auto max-w-2xl text-center">
+        <h2 class="text-3xl font-bold tracking-tight text-gray-800 sm:text-4xl"><span
+            class="font-medium text-gray-400">╰(▔∀▔)╯</span><br>Hello, and welcome!</h2>
+
+        <p class="text-justify mx-auto mt-8 max-w-xl text-lg leading-8 text-gray-600">My name is Jordan, and I guess you
+          could say that I am a <a href="https://etiennefd.substack.com/p/common-tech-jobs-described-as-cabals"
+            target="_blank" class="font-medium italic text-blue-600 hover:text-blue-700">software developer</a>.
+          Currently, I am working on DX with a team at <a href="https://www.tryfinch.com/" target="_blank"
+            class="text-blue-600 hover:text-blue-700">Finch</a>, focusing on our developer dashboard, <a
+            href="https://developer.tryfinch.com/" target="_blank"
+            class="text-blue-600 hover:text-blue-700">documentation</a>, sandbox, <a href="https://github.com/Finch-API"
+            target="_blank" class="text-blue-600 hover:text-blue-700">SDKs</a>, and auth flow for connecting
+          HRIS and ATS systems to Finch.</p>
+
+        <div class="mt-10 flex flex-col items-center justify-center gap-y-2">
+          <a href="https://blog.jordanbrauer.dev"
+            class="rounded-full border border-gray-900 hover:border-transparent bg-transparent hover:bg-gray-900 hover:text-white px-3.5 py-2.5 text-sm font-semibold text-gray-900 shadow-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 line-through">Read
+            my blog</a>
+          <p class="text-sm italic leading-6 text-gray-400">or, you know.. dont!</p>
         </div>
-    </body>
+      </div>
+    </div>
+  </div>
+</body>
+
 </html>
